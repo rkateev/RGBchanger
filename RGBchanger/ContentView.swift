@@ -30,8 +30,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-        ContentView()
-            .previewInterfaceOrientation(.landscapeLeft)
     }
 }
 
@@ -45,6 +43,7 @@ struct SliderView: View {
             Slider(value: $value, in: 0...255, step: 1)
             TextField("", value: $value, formatter: NumberFormatter())
                 .textFieldStyle(.roundedBorder)
+                .keyboardType(.decimalPad)
                 .frame(width: 50)
         }
     
